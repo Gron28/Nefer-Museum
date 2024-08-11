@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets - The Nefer Museum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+          <a href="index.html" class="logo">NEFER</a>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="visit.html">Plan Your Visit</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="tickets.html" class="cta-button">Tickets</a></li>
+          </ul>
+        </nav>
+      </header>
+
+    <main>
+        <section class="tickets-intro">
+            <div class="container">
+                <h1>Buy Your Tickets</h1>
+            </div>
+        </section>
+
+        <section class="ticket-selection">
+            <div class="container">
+                <div class="selection-area">
+
+                    <div class="calendar-container input-group">
+                        <h3>Choose a Date</h3>
+                        <input type="date" id="visitDate" min="2024-08-16">
+                    </div>
+
+                    <div class="quantity-selector input-group">
+                        <h3>How many tickets?</h3>
+                        <label for="quantity">Quantity:</label>
+                        <select id="quantity">
+                            <option value="1">1 Ticket</option>
+                            <option value="2">2 Tickets</option>
+                            <option value="3">3 Tickets</option>
+                            <option value="4">4 Tickets</option>
+                            <option value="5">5 Tickets</option>
+                        </select>
+                    </div>
+
+                    <div class="order-summary">
+                        <p>Selected Date: <span id="selectedDate">-</span></p>
+                        <p>Number of Tickets: <span id="selectedQuantity">-</span></p>
+                        <p class="total-price">Total: $0</p>
+                    </div>
+
+                    <button class="cta-button purchase-button">Purchase</button>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 The Nefer Museum. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const purchaseButton = document.querySelector('.purchase-button');
+        const visitDateInput = document.getElementById('visitDate');
+        const quantitySelect = document.getElementById('quantity');
+        const selectedDateDisplay = document.getElementById('selectedDate');
+        const selectedQuantityDisplay = document.getElementById('selectedQuantity');
+        const totalPriceElement = document.querySelector('.total-price');
+    
+        visitDateInput.addEventListener('change', updateOrderSummary);
+        quantitySelect.addEventListener('change', updateOrderSummary);
+    
+        function updateOrderSummary() {
+          const selectedDate = visitDateInput.value;
+          const selectedQuantity = parseInt(quantitySelect.value);
+    
+          selectedDateDisplay.textContent = selectedDate ? selectedDate : '-';
+          selectedQuantityDisplay.textContent = selectedQuantity;
+          
+          const ticketPrice = 20; // Update with your actual ticket price
+          const totalPrice = selectedQuantity * ticketPrice;
+          totalPriceElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
+        }
+    
+        purchaseButton.addEventListener('click', () => {
+          // Replace with actual checkout logic
+          console.log("Purchase clicked!");
+        });
+      </script>
+</body>
+</html>

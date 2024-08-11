@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Nefer Museum - Discover Ancient Egypt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">NEFER</a>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="visit.html">Plan Your Visit</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="tickets.html" class="cta-button">Tickets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-overlay">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Journey Through Time</h1>
+                        <p>Discover the wonders of ancient Egypt at The Nefer Museum. Explore a captivating collection of artifacts, learn about pharaohs and gods, and unravel the mysteries of a lost civilization.</p>
+                        <a href="tickets.html" class="cta-button">Plan Your Visit</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-nefer">
+            <div class="container">
+                <h2>About Nefer</h2>
+                <p>The Nefer Museum is more than just a collection of artifacts; it's a journey through time. Experience the magic of ancient Egypt in an intimate and engaging setting. </p>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h3>Opening Hours</h3>
+                        <p>Monday - Friday: 10:00 AM - 6:00 PM <br> Saturday - Sunday: 10:00 AM - 8:00 PM</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Location</h3>
+                        <p>456 Elm Street, Alexandria, Egypt</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="explore-section">
+            <div class="container">
+                <h2>Explore Our Collection</h2>
+                <div class="explore-grid">
+                    <div class="explore-item" data-artifact="1">
+                        <img src="images/artifact1-thumb.jpg" alt="Golden Mask of Tutankhamun">
+                        <h3>Golden Mask</h3>
+                    </div>
+                    <div class="explore-item" data-artifact="2">
+                        <img src="images/artifact2-thumb.jpg" alt="Rosetta Stone">
+                        <h3>Rosetta Stone</h3>
+                    </div>
+                    <div class="explore-item" data-artifact="3">
+                        <img src="images/artifact3-thumb.jpg" alt="Great Sphinx of Giza">
+                        <h3>Great Sphinx</h3>
+                    </div>
+                    <div class="explore-item" data-artifact="4">
+                        <img src="images/artifact4-thumb.jpg" alt="Narmer Palette">
+                        <h3>Narmer Palette</h3>
+                    </div>
+                    <div class="explore-item" data-artifact="5">
+                        <img src="images/artifact5-thumb.jpg" alt="Bust of Nefertiti">
+                        <h3>Bust of Nefertiti</h3>
+                    </div>
+                    <div class="explore-item" data-artifact="6">
+                        <img src="images/artifact6-thumb.jpg" alt="Book of the Dead">
+                        <h3>Book of the Dead</h3>
+                    </div>
+                    <div class="explore-item" data-artifact="7">
+                        <img src="images/artifact7-thumb.jpg" alt="Seated Scribe Statue">
+                        <h3>Seated Scribe</h3>
+                    </div>
+                    <div class="explore-item" data-artifact="8">
+                        <img src="images/artifact8-thumb.jpg" alt="Colossal Statue of Ramesses II">
+                        <h3>Ramesses II Statue</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Artifact Modal (Hidden by default) -->
+        <div id="artifactModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">×</span>
+                <div class="modal-gallery">
+                    <!-- Images will be loaded here -->
+                </div>
+                <div class="modal-info">
+                    <h2 class="artifact-title"></h2>
+                    <p class="artifact-description"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+            <p>© 2024 The Nefer Museum. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const exploreItems = document.querySelectorAll('.explore-item');
+        const artifactModal = document.getElementById('artifactModal');
+        const modalGallery = artifactModal.querySelector('.modal-gallery');
+        const artifactTitle = artifactModal.querySelector('.artifact-title');
+        const artifactDescription = artifactModal.querySelector('.artifact-description');
+        const closeButton = artifactModal.querySelector('.close-button');
+
+        exploreItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const artifactId = item.dataset.artifact;
+
+                // Replace these with your actual image paths and data
+                const images = [
+                    `images/artifact${artifactId}-1.jpg`,
+                    `images/artifact${artifactId}-2.jpg`, 
+                    // Add more images as needed 
+                ];
+
+                const title = `Artifact ${artifactId} Title`; 
+                const description = `This is a more detailed description of Artifact ${artifactId}. You can add more information about its history, significance, etc.`;
+
+                // Load images into the modal gallery
+                modalGallery.innerHTML = ''; // Clear previous images
+                images.forEach(image => {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = image;
+                    imgElement.alt = title; 
+                    modalGallery.appendChild(imgElement);
+                });
+
+                artifactTitle.textContent = title;
+                artifactDescription.textContent = description;
+
+                artifactModal.style.display = 'block';
+            });
+        });
+
+        closeButton.addEventListener('click', () => {
+            artifactModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === artifactModal) {
+                artifactModal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

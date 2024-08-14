@@ -4,34 +4,38 @@
 */
 
 :root {
-  /* Color Palette - The Heart of the Design */
-  --primary: #6ebabf; 
-  --secondary: #b75c64; 
-  --accent: #e5d571;; 
-  --light: #f6fefe;  
-  --shadow: #d9d9d9; 
-  --text: #031d21;  
+  /* Color Palette - Inspired by the Sands of Time */
+  --primary: #135d48; /* Deep Teal - The Nile's mystery */
+  --secondary: #1d7684; /* Golden Yellow - Royalty and ancient treasures */
+  --accent: #9e431c; /* Rich Brown - Earthy and timeless */
+  --light: #000000; /* Off-White - Clean and elegant */
+  --text: #ffffff;/* Dark Gray - For body text */ 
 
-  /* Typography - The Voice of Nefer */
-  --font-family: 'Lora', serif; 
+  /* Typography - The Echoes of Scribes */
+  --font-family: 'Lora', serif;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
 }
 
-/* Reset - A Clean Slate */
+/* Global Reset - A Foundation of Order */
 * {
+  margin: 0; /* Set margin to 0 to remove default margin from all elements */
+  padding: 0;
+  box-sizing: border-box; 
+}
+/* Forceful Reset to Remove Top Space */
+html, body, div, section, header, nav, h1, h2, h3, p, ul, li, a {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-/* Base Styles - The Foundation of Harmony */
+/* Base Styles - Setting the Stage */
 body {
   font-family: var(--font-family);
-  line-height: 1.7;
-  color: var(--text); 
-  background-color: var(--light);
+  line-height: 1.7; /* Improved readability */
+  color: var(--text);
+  background-color: var(--light); 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -42,26 +46,26 @@ body {
   padding: 0 20px;
 }
 
+/* Links - Portals to Exploration */
 a {
-  color: var(--primary);
+  color: var(--primary); 
   text-decoration: none;
-  transition: all 0.3s ease; 
+  transition: all 0.3s ease;
 }
 
 a:hover {
-  color: var(--secondary); 
-  text-decoration: underline; 
+  color: var(--secondary);
+  text-decoration: underline;
 }
 
-
-/* Typography - The Language of the Ancients */
+/* Typography - The Language of the Past */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: var(--font-weight-bold); 
+  font-weight: var(--font-weight-bold);
 }
 
 h1 {
-  font-size: 3.5em;
-  margin-bottom: 1.5rem; 
+  font-size: 3.5em; 
+  margin-bottom: 2rem; 
 }
 
 h2 {
@@ -76,11 +80,16 @@ h3 {
 
 p {
   margin-bottom: 1.2rem;
-  line-height: 1.6;
+  line-height: 1.6; 
 }
 
+ul {
+    list-style-type: disc;
+    padding-left: 2rem; 
+    margin-bottom: 1rem; 
+  }
 
-/* Header - A Portal to the Past */
+/* Header - A Timeless Gateway */
 header {
   background-color: var(--light);
   padding: 1.5rem 0;
@@ -94,13 +103,13 @@ header {
 nav {
   display: flex;
   justify-content: space-between; 
-  align-items: center;
+  align-items: center; 
 }
 
 .logo {
   font-size: 1.8rem; 
-  font-weight: var(--font-weight-bold);
-  color: var(--primary); 
+  font-weight: var(--font-weight-bold); 
+  color: var(--primary);
 }
 
 nav ul {
@@ -118,44 +127,66 @@ nav a {
   color: var(--primary); 
   text-decoration: none; 
   font-weight: var(--font-weight-medium); 
-  transition: color 0.3s ease; 
+  transition: color 0.3s ease;
+}
+
+nav .nav-button {
+  display: inline-block;
+  background-color: var(--secondary);
+  color: var(--light);
+  padding: 0.4rem 0.9rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  transition: all 0.3s ease; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav .nav-button a {  /* Target the link within the button */
+  color: var(--light); /* Set link color to white */
+  text-decoration: none;  /* Remove underline from link */
+}
+
+nav .nav-button:hover {
+  background-color: darken(var(--secondary), 5%); 
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 nav a:hover,
 nav a.active {
-  color: var(--secondary);
+  color: var(--secondary); 
 }
 
-/* Call to Action Button - A Gateway to Exploration */
+/* Call to Action Button - Unveiling the Past */
 .cta-button {
-  display: inline-block; 
-  background-color: var(--secondary); 
-  color: var(--light); 
-  padding: 1rem 2rem; 
-  border: none; 
-  border-radius: 5px; 
-  text-decoration: none; 
-  font-weight: var(--font-weight-bold); 
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  display: inline-block;
+  background-color: var(--secondary);
+  color: var(--light);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  transition: all 0.3s ease; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .cta-button:hover {
-  transform: translateY(-2px); 
   background-color: darken(var(--secondary), 5%); 
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Highlight Section - Subtle Elegance */
 .highlight {
-  background-color: var(--light);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
-  padding: 3rem 2rem;
+  background-color: var(--light); 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); 
+  border-radius: 10px; 
+  padding: 3rem 2rem; 
 }
 
 .highlight .content {
-text-align: center;
+  text-align: center; 
 }
 
 .highlight .content > *:not(:last-child) {
@@ -164,330 +195,323 @@ text-align: center;
 
 /* Main Styles */
 main {
-  padding-bottom: 40px; 
+  padding-top: 0; /* Space for fixed header */
+  padding-bottom: 40px;
+  margin-top: -25px;
 }
 
-/* --- Section Styles --- */
-
-/* Hero Section - An Evocative Entrance */
-#hero {
-position: relative; 
-min-height: 65vh; 
-display: flex;
-align-items: center;
-text-align: center;
-color: var(--light);
-overflow: hidden; 
+main:not(#homepage main) {  /* Apply padding to all pages EXCEPT the homepage */
+  padding-top: 7rem; 
+  padding-bottom: 40px;
 }
+
+/* --- Hero Sections: Gateway to Ancient Wonders --- */
+
 
 .hero-image {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: -1; 
-overflow: hidden;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  z-index: -1; 
+  overflow: hidden; 
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-image img {
-width: 100%;
-height: 100%; 
-object-fit: cover; 
+  display: none; /* Hide this image - no longer needed  */ 
 }
 
 .hero-overlay {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(var(--primary-rgb), 0.7), rgba(var(--primary-rgb), 0));
 }
 
 .hero-content {
-position: relative; 
-z-index: 2;
+  position: relative;
+  z-index: 2; 
+  text-align: center; 
 }
 
 .hero-content h1 {
-text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); 
-margin-bottom: 1rem; 
+  font-size: 3.5em; 
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); 
+  margin-bottom: 1rem;
+  color: var(--light); 
 }
 
 .hero-content p {
-font-size: 1.3em; 
-line-height: 1.8; 
-margin-bottom: 2rem; 
+  font-size: 1.3em;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: var(--light);
 }
+
+/* Homepage Hero */
+#hero {
+  min-height: 65vh; 
+  display: flex;
+  align-items: center;
+  background-image: url("images/homepage.jpg"); /* Add your hero image path here */ 
+  background-size: cover; 
+  background-position: center;
+}
+
+/* About Hero */
+#about-hero {
+  min-height: 65vh;  
+  display: flex;
+  align-items: center;
+  background-image: url("images/about.jpg"); /* Replace with an about-specific image */
+}
+
+/* Visit Hero */
+#visit-hero {
+  min-height: 65vh; 
+  display: flex;
+  align-items: center;
+  background-image: url("images/visit.jpg");  
+}
+
+/* Support Hero */
+#support-hero {
+  min-height: 65vh;  
+  display: flex;
+  align-items: center;
+  background-size: cover;  /* Ensures the image covers the entire area */
+  background-repeat: no-repeat;
+  background-image: url("images/support.jpg");  
+}
+
+/* Tickets Hero */
+#tickets-hero {
+  min-height: 65vh;  
+  display: flex;
+  align-items: center;
+  background-size: cover;  /* Ensures the image covers the entire area */
+  background-repeat: no-repeat;
+  background-image: url("images/tickets.jpg");   /* Replace with a tickets-specific image */
+}
+
+/* --- Content Section Styles --- */
 
 /* Info Section - Concise & Clear */
 #info {
-padding: 3rem 0; 
+  padding: 3rem 0; 
 }
 
 .info-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-gap: 2rem; 
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 2rem; 
 }
 
 .info-item {
-text-align: center; 
-padding: 2rem; 
-border-radius: 8px;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-transition: all 0.3s ease;
+  text-align: center; 
+  padding: 2rem; 
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.425);
+  transition: all 0.3s ease;
 }
 
 .info-item:hover {
-transform: translateY(-3px); 
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .info-item i {
-font-size: 2em; 
-color: var(--secondary); 
-margin-bottom: 1rem;
+  font-size: 2em; 
+  color: var(--secondary); 
+  margin-bottom: 1rem;
 }
 
 .info-item h3 {
-color: var(--primary);
-margin-bottom: 0.5rem; 
+  color: var(--primary);
+  margin-bottom: 0.5rem; 
 }
 
-/* Featured Artifact Section - A Showcase of History */
+#info .cta-button { 
+  display: block;
+  margin: 0 auto; /* Auto margin on left/right will center it */
+}
+
+/* Museum Intro Section - An Invitation to Explore */
+#museum-intro {
+  padding: 4rem 0; 
+  background-color: var(--light); 
+  text-align: center; 
+}
+
+#museum-intro h2 {
+  color: var(--primary);
+  margin-bottom: 1rem; 
+}
+
+#museum-intro p {
+  max-width: 800px; 
+  margin: 0 auto; 
+  line-height: 1.6; 
+}
+
+/* Featured Artifact Section - A Glimpse into the Past */
 #featured-artifact {
-padding: 4rem 0; 
+  padding: 4rem 0;
 }
 
 #featured-artifact .artifact-grid {
-display: grid;
-grid-template-columns: 1fr 1fr; 
-gap: 3rem;
-align-items: center; 
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 3rem; 
+  align-items: center; 
 }
 
 #featured-artifact .artifact-image {
-position: relative;
-overflow: hidden;
-border-radius: 10px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 #featured-artifact .artifact-image img {
-width: 100%;
-height: auto;
-transition: transform 0.5s ease; 
+  width: 100%; 
+  height: auto; 
+  transition: transform 0.5s ease;
 }
 
 #featured-artifact .artifact-image:hover img {
-transform: scale(1.05);
+  transform: scale(1.05); 
 }
 
 #featured-artifact .artifact-info h3 {
-color: var(--primary); 
-margin-bottom: 0.8rem;
+  color: var(--primary);
+  margin-bottom: 0.8rem;
 }
 
 /* Explore Section - Journey Through Time */
 #explore {
-padding: 4rem 0; 
+  padding: 4rem 0; 
 }
 
 #explore .artifact-grid {
-display: grid;
-grid-template-columns: repeat(3, 1fr); 
-gap: 2rem; 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
 #explore .artifact-grid img {
-width: 100%; 
-height: 200px; 
-object-fit: cover; 
-border-radius: 8px; 
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-transition: all 0.3s ease;
+  width: 100%;  
+  padding-bottom: 0%; /* Creates the square aspect ratio */
+  object-fit: cover;
+  border-radius: 8px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 #explore .artifact-grid img:hover {
-transform: translateY(-3px); 
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-
-/* About Us Styles */
-#about-hero {
-position: relative;
-min-height: 40vh;  /* Adjust as needed */
-display: flex;
-align-items: center; 
-text-align: center; 
-color: var(--light);
-overflow: hidden; 
+/* Explore Section CTA */
+.explore-cta {
+  grid-column: span 3; /* Make button span all 3 columns */
+  text-align: center;
+  margin-top: 3rem; 
 }
 
-#about-hero .hero-image {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: -1;
-overflow: hidden; 
-}
-
-#about-hero .hero-image img {
-width: 100%;
-height: 100%;
-object-fit: cover; 
-}
-
-#about-hero .hero-content {
-position: relative;
-z-index: 2;
-}
-
-#about-hero h1 {
-text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
-margin-bottom: 0.8rem; 
-font-size: 3.5em; /* Consistent h1 font-size in hero sections */
-}
-
-#about-hero p {
-font-size: 1.2em;
-line-height: 1.6;
-margin-bottom: 2rem;
-}
-
-
-/* Unique Experience Section */
+/* Unique Experience Section - About Page */
 #unique-experience {
-padding: 4rem 0; 
+  padding: 4rem 0; 
 }
 
 #unique-experience h2 {
-text-align: center; 
+  text-align: center; 
 }
 
 #unique-experience .content {
-text-align: center; 
-}
-
-#unique-experience .cta-buttons {
-margin-top: 2rem; 
-display: flex; 
-justify-content: center; 
-gap: 1.5rem; 
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-#unique-experience .cta-buttons {
-  flex-direction: column; 
-  align-items: center;
-}
-}
-
-/* ------------------- Visit Page Styles -------------------- */
-#visit-hero {
-  position: relative;
-  min-height: 40vh;  /* Adjust as needed */
-  display: flex;
-  align-items: center; 
   text-align: center; 
-  color: var(--light);
-  overflow: hidden; 
-  }
-
-#visit-hero .hero-image {
-background-image: url("images/visit-hero.jpg"); /* Replace with a Visit Page Specific Hero Image */
 }
 
+#unique-experience .cta-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; 
+}
+
+/* Location & Hours Section - Visit Page */
 #location-info {
   padding: 4rem 0;
 }
 
 .location-grid {
-display: grid;
-grid-template-columns: 1fr 1fr; 
-gap: 3rem;
-align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 3rem; 
+  align-items: center;
 }
 
 .map-container {
   border-radius: 10px; 
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  overflow: hidden; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .map-container iframe { 
-width: 100%; 
-height: 400px; 
+  width: 100%;
+  height: 400px; 
 }
 
 .address-info {
-/* Style as needed - You can center content, add borders, etc. */
-text-align: center; 
+  text-align: center; 
 }
 
 .address-info p {
-margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .address-info h3 {
-color: var(--primary);
-margin-bottom: 1rem;
+  color: var(--primary);
+  margin-bottom: 1rem; 
 }
 
-/* Accessibility Section */
+/* Accessibility Section - Visit Page */
 #accessibility {
-padding: 4rem 0; 
+  padding: 4rem 0; 
 }
 
 #accessibility .content {
-text-align: left;
+  text-align: left; 
 }
 
 #accessibility ul {
-list-style-type: disc;
-padding-left: 2rem; 
-margin-bottom: 1rem; 
+  list-style-type: disc;
+  padding-left: 2rem; 
+  margin-bottom: 1rem; 
 }
 
-/* Responsive Design - Adjusting the Location Grid */
-@media (max-width: 768px) {
-.location-grid {
-  grid-template-columns: 1fr; /* Stack columns on smaller screens */
-}
-}
-
-
-/*--------------------- Support Page Styles ---------------------*/
-
-#support-hero {
-  position: relative;
-  min-height: 40vh;  /* Adjust as needed */
-  display: flex;
-  align-items: center; 
-  text-align: center; 
-  color: var(--light);
-  overflow: hidden; 
+/* Visit CTA - Encouraging Exploration */
+#visit-cta {
+  padding: 3rem 0;
+  background-color: var(--light); 
+  text-align: center;
 }
 
-#support-hero .hero-image {
-  background-image: url("images/support-hero.jpg"); /* Replace with an appropriate image */
-}
-
-/* Ways to Support Section */
+/* Ways to Support Section - Support Page */
 #ways-to-support {
-  padding: 4rem 0;
+  padding: 4rem 0; 
 }
 
 .support-options {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
-  gap: 3rem;
+  gap: 3rem; 
 }
 
 .option-item {
@@ -500,18 +524,18 @@ margin-bottom: 1rem;
 
 .option-item:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
 }
 
 .option-item i {
-  font-size: 3em;
+  font-size: 3em; 
   color: var(--secondary);
   margin-bottom: 1rem; 
 }
 
 .option-item h3 {
   color: var(--primary); 
-  margin-bottom: 0.8rem; 
+  margin-bottom: 0.8rem;
 }
 
 .support-cta {
@@ -519,35 +543,13 @@ margin-bottom: 1rem;
   margin-top: 3rem;
 }
 
-/* Responsive Adjustments for Support Options */
-@media (max-width: 768px) {
-  .support-options {
-    grid-template-columns: 1fr; /* Single column layout for smaller screens */
-  }
-}
-
-/* -------------------- Tickets Page Styles --------------------- */
-
-#tickets-hero {
-  position: relative;
-  min-height: 40vh;  /* Adjust as needed */
-  display: flex;
-  align-items: center; 
-  text-align: center; 
-  color: var(--light);
-  overflow: hidden; 
-}
-
-#tickets-hero .hero-image {
-  background-image: url("images/tickets-hero.jpg"); /* Replace with an appropriate image */
-}
-
+/* Ticket Purchase Section - Ticket Page */
 #ticket-purchase {
-  padding: 4rem 0;
+  padding: 4rem 0; 
 }
 
 #ticket-purchase .content {
-  text-align: center; /* Center align the content */
+  text-align: center;
 }
 
 #ticket-purchase h2 {
@@ -556,15 +558,15 @@ margin-bottom: 1rem;
 
 #ticket-purchase p {
   max-width: 700px; 
-  margin: 0 auto 2rem auto;
-  line-height: 1.6;
+  margin: 0 auto 2rem auto; 
+  line-height: 1.6; 
 }
 
-/* Form Styles */
+/* Ticket Form Styles */
 #ticket-form .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem; 
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   align-items: center;
 }
 
@@ -577,74 +579,61 @@ margin-bottom: 1rem;
 #ticket-form input[type="date"],
 #ticket-form input[type="number"] {
   padding: 0.8rem;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--secondary-color); 
   border-radius: 5px;
-  width: 100%; 
-  max-width: 300px; 
+  width: 100%;
+  max-width: 300px;
 }
 
-/* Confirmation Section */
+/* Ticket Confirmation - A Successful Journey */
 #confirmation {
   text-align: center; 
-  padding: 4rem 0;
+  padding: 4rem 0; 
 }
 
 #confirmation h2 {
-  color: var(--secondary);
-  margin-bottom: 1rem;
+  color: var(--secondary); 
+  margin-bottom: 1rem; 
 }
 
-/* Responsive Design for Ticket Form */
-@media (max-width: 768px) {
-  #ticket-form .form-group {
-    flex-direction: column; /* Stack form elements vertically on small screens */
-  }
-
-  #ticket-form label {
-    text-align: center; 
-  }
-}
-
-
-/* Footer - Grounded in Timelessness */
+/* Footer - A Timeless Foundation */
 footer {
-background-color: var(--primary); 
-color: var(--light); 
-padding: 2rem 0; 
-text-align: center;
+  background-color: var(--primary); 
+  color: var(--light); 
+  padding: 2rem 0; 
+  text-align: center; 
 }
 
-/* Responsive Design - Adapting to the Sands of Time */
-@media (max-width: 768px) {
-/* Global responsive styles */
-h1 {
-  font-size: 2.5em; 
-}
+/* ---------------- Media Queries for Responsiveness ---------------- */
+@media (max-width: 768px) { 
+  h1 {
+    font-size: 2.8em; 
+  }
 
-h2 {
-  font-size: 2em; 
-}
+  h2 {
+    font-size: 2.2em; 
+  }
 
-h3 {
-  font-size: 1.5em; 
-}
+  h3 {
+    font-size: 1.6em;
+  }
 
-.hero-content p {
-  font-size: 1.1em; 
-}
+  .hero-content p {
+    font-size: 1.1em; 
+  }
 
-/* Homepage Responsive */
-#featured-artifact .artifact-grid {
-  grid-template-columns: 1fr; 
-}
+  #featured-artifact .artifact-grid {
+    grid-template-columns: 1fr; 
+  }
 
-#info .info-grid {
-  grid-template-columns: 1fr; 
-}
+  #info .info-grid,
+  .location-grid,
+  .support-options {
+    grid-template-columns: 1fr;
+  }
 
-/* Other Page Responsive - Add more as needed */
-/* Example: */
-#location-info .location-grid { 
-  grid-template-columns: 1fr; 
+  #ticket-form .form-group {
+    flex-direction: column; 
+    align-items: center;
+  }
 }
-} 

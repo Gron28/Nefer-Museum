@@ -3,79 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Support - The Nefer Museum</title>
+  <title>Support | Nefer Museum</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
 </head>
 <body>
   <header>
-    <nav class="container">
-      <a href="index.html" class="logo">NEFER</a>
-      <ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="visit.html">Plan Your Visit</a></li>
-        <li><a href="support.html">Support</a></li>
-        <li><a href="tickets.html" class="cta-button">Tickets</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">Nefer Museum</a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="visit.html">Visit</a></li>
+          <li><a href="support.html" class="active">Support</a></li>
+          <li><a href="tickets.html">Tickets</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="support-intro">
-      <div class="container">
-        <h1>Support The Nefer Museum</h1>
-        <p>Your contributions help us preserve ancient wonders, inspire learning, and make history accessible to all. </p>
-      </div>
-    </section>
-
-    <section class="support-impact">
-      <div class="container">
-        <h2>Your Impact</h2>
-        <div class="impact-stories">
-          <!-- Story 1 -->
-          <div class="story-item">
-            <div class="story-content">
-              <h3>Preserving Ancient Treasures</h3>
-              <p>Thanks to generous donations, we meticulously restored the fragile hieroglyphics on a 3,000-year-old sarcophagus, bringing its story back to life.</p>
-            </div>
-            <img src="images/impact-story1.jpg" alt="Image of a restored artifact">
-          </div>
-
-          <!-- Story 2 -->
-          <div class="story-item">
-            <img src="images/impact-story2.jpg" alt="Image of children interacting with an exhibit">
-            <div class="story-content">
-              <h3>Inspiring Young Minds</h3>
-              <p>"Visiting The Nefer Museum sparked my daughter's passion for history! The interactive exhibits made learning fun and engaging." - Sarah, museum visitor</p>
-            </div>
-          </div>
+    <section id="support-hero">
+      <div class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <h1>Support the Magic</h1>
+          <p>Your generosity ensures that ancient wonders continue to inspire.</p>
         </div>
       </div>
     </section>
 
-    <section class="support-options">
+    <section id="ways-to-support" class="highlight">
       <div class="container">
-        <h2>Ways to Support</h2>
-        <div class="options-grid">
-          <div class="option-item">
-            <h3>Make a Donation</h3>
-            <p>Every contribution, no matter the size, directly impacts our ability to share the wonders of ancient Egypt with the world.</p>
-            <a href="#" class="cta-button">Donate Now</a>
+        <div class="content">
+          <h2>Ways to Support</h2>
+          <div class="support-options">
+            <div class="option-item">
+              <i class="fas fa-donate"></i>
+              <h3>Make a Donation</h3>
+              <p>Your contribution, big or small, makes a world of difference in preserving history and inspiring future generations.</p>
+              <a href="#" class="cta-button">Donate Now</a>
+            </div>
+            <div class="option-item">
+              <i class="fas fa-hands-helping"></i>
+              <h3>Volunteer Your Time</h3>
+              <p>Share your passion for ancient Egypt and make a meaningful impact by volunteering at the Nefer Museum.</p>
+              <a href="#" class="cta-button">Explore Opportunities</a>
+            </div>
           </div>
-          <div class="option-item">
-            <h3>Volunteer Your Time</h3>
-            <p>Become a part of the Nefer Museum family and help us bring history to life. </p>
-            <a href="#" class="cta-button">Volunteer Opportunities</a>
+          <div class="support-cta">
+            <p>Every contribution helps. You can also support the museum by purchasing a ticket and experiencing the magic firsthand.</p>
+            <a href="tickets.html" class="cta-button">Explore the Collection</a>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
   <footer>
     <div class="container">
-      <p>© 2024 The Nefer Museum. All rights reserved.</p>
+      <p>© 2024 Nefer Museum. All rights reserved.</p>
     </div>
   </footer>
+
 </body>
 </html>

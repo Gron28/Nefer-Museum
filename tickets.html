@@ -1,98 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tickets - The Nefer Museum</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tickets | Nefer Museum</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <header>
-        <nav class="container">
-          <a href="index.html" class="logo">NEFER</a>
-          <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="visit.html">Plan Your Visit</a></li>
-            <li><a href="support.html">Support</a></li>
-            <li><a href="tickets.html" class="cta-button">Tickets</a></li>
-          </ul>
-        </nav>
-      </header>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">Nefer Museum</a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="visit.html">Visit</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="tickets.html" class="active">Tickets</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <section class="tickets-intro">
-            <div class="container">
-                <h1>Buy Your Tickets</h1>
-            </div>
-        </section>
+  <main>
 
-        <section class="ticket-selection">
-            <div class="container">
-                <div class="selection-area">
-
-                    <div class="calendar-container input-group">
-                        <h3>Choose a Date</h3>
-                        <input type="date" id="visitDate" min="2024-08-16">
-                    </div>
-
-                    <div class="quantity-selector input-group">
-                        <h3>How many tickets?</h3>
-                        <label for="quantity">Quantity:</label>
-                        <select id="quantity">
-                            <option value="1">1 Ticket</option>
-                            <option value="2">2 Tickets</option>
-                            <option value="3">3 Tickets</option>
-                            <option value="4">4 Tickets</option>
-                            <option value="5">5 Tickets</option>
-                        </select>
-                    </div>
-
-                    <div class="order-summary">
-                        <p>Selected Date: <span id="selectedDate">-</span></p>
-                        <p>Number of Tickets: <span id="selectedQuantity">-</span></p>
-                        <p class="total-price">Total: $0</p>
-                    </div>
-
-                    <button class="cta-button purchase-button">Purchase</button>
-
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>© 2024 The Nefer Museum. All rights reserved.</p>
+    <section id="tickets-hero">
+      <div class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <h1>Tickets</h1>
+          <p>Embark on your journey through ancient Egypt.</p>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <script>
-        const purchaseButton = document.querySelector('.purchase-button');
-        const visitDateInput = document.getElementById('visitDate');
-        const quantitySelect = document.getElementById('quantity');
-        const selectedDateDisplay = document.getElementById('selectedDate');
-        const selectedQuantityDisplay = document.getElementById('selectedQuantity');
-        const totalPriceElement = document.querySelector('.total-price');
-    
-        visitDateInput.addEventListener('change', updateOrderSummary);
-        quantitySelect.addEventListener('change', updateOrderSummary);
-    
-        function updateOrderSummary() {
-          const selectedDate = visitDateInput.value;
-          const selectedQuantity = parseInt(quantitySelect.value);
-    
-          selectedDateDisplay.textContent = selectedDate ? selectedDate : '-';
-          selectedQuantityDisplay.textContent = selectedQuantity;
-          
-          const ticketPrice = 20; // Update with your actual ticket price
-          const totalPrice = selectedQuantity * ticketPrice;
-          totalPriceElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
-        }
-    
-        purchaseButton.addEventListener('click', () => {
-          // Replace with actual checkout logic
-          console.log("Purchase clicked!");
-        });
-      </script>
+    <section id="ticket-purchase" class="highlight">
+      <div class="container">
+        <div class="content">
+          <h2>Purchase Your Tickets</h2>
+          <p>Secure your admission to the Nefer Museum. Please note that tickets are for a specific date and time slot to ensure a comfortable and immersive experience for all visitors. </p>
+
+          <form id="ticket-form" action="#" method="post">
+            <div class="form-group">
+              <label for="ticket-type">Ticket Type:</label>
+              <select id="ticket-type" name="ticket-type">
+                <option value="adult">Adult (18-64) - $20</option>
+                <option value="child">Child (Under 18) - Free</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="date">Date:</label>
+              <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="form-group">
+              <label for="time">Time Slot:</label>
+              <select id="time" name="time">
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+              <label for="quantity">Quantity:</label>
+              <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+            </div>
+
+            <button type="submit" class="cta-button">Purchase Tickets</button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="confirmation" style="display: none;">
+      <div class="container">
+        <div class="content">
+          <h2>Thank You!</h2>
+          <p>Your tickets have been reserved. You'll receive a confirmation email shortly.</p>
+          </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2024 Nefer Museum. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <script>
+    const form = document.querySelector('form');
+    const confirmation = document.getElementById('confirmation');
+  
+    form.addEventListener('submit', (event) => {
+      event.preventDefault(); 
+      // You would normally send form data to a server here,
+      // but for this simulation, we'll just show the confirmation message
+  
+      confirmation.style.display = 'block'; 
+      form.style.display = 'none';
+    });
+  </script>
+
 </body>
 </html>

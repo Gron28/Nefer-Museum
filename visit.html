@@ -3,94 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plan Your Visit - The Nefer Museum</title>
+  <title>Visit | Nefer Museum</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
 </head>
 <body>
   <header>
-    <nav class="container">
-      <a href="index.html" class="logo">NEFER</a>
-      <ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="visit.html">Plan Your Visit</a></li>
-        <li><a href="support.html">Support</a></li>
-        <li><a href="tickets.html" class="cta-button">Tickets</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">Nefer Museum</a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="visit.html" class="active">Visit</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="tickets.html">Tickets</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="visit-intro">
-      <div class="container">
-        <h1>Plan Your Visit</h1>
-        <p>Let the wonders of ancient Egypt unfold before you.</p>
+    <section id="visit-hero">
+      <div class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <h1>Plan Your Visit</h1>
+          <p>Step into the heart of ancient Egypt. </p>
+        </div>
       </div>
     </section>
 
-    <section class="visit-details">
+    <section id="location-info" class="highlight">
       <div class="container">
-        <!-- Hours & Location -->
-        <div class="details-item">
-          <img src="images/icon-location.svg" alt="Location Icon">
-          <h3>Hours & Location</h3>
-          <div class="details-content">
-            <p><strong>Address:</strong> 456 Elm Street, Alexandria, Egypt</p>
-            <p><strong>Hours:</strong></p>
-            <ul>
-              <li>Monday - Friday: 10:00 AM - 6:00 PM</li>
-              <li>Saturday - Sunday: 10:00 AM - 8:00 PM</li>
-            </ul>
-            <p><strong>Closed:</strong> National holidays</p>
-          </div>
-          <div class="map-container">
-            <img src="images/map-placeholder.jpg" alt="Map to the Nefer Museum">
-          </div>
-        </div>
+        <div class="content">
+          <div class="location-grid">
+            <div class="map-container">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.9006178025616!2d-77.06622548466414!3d38.82924767957052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c8931e23809d%3A0x7232837892e67e95!2s455%20S%20Alfred%20St%2C%20Alexandria%2C%20VA%2022314!5e0!3m2!1sen!2sus!4v1691862260596!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="address-info">
+              <h3>Address & Hours</h3>
+              <p>
+                <strong>Nefer Museum</strong><br>
+                455 Elm Street<br>
+                Alexandria, VA 22301
+              </p>
 
-        <!-- Getting Here -->
-        <div class="details-item">
-          <img src="images/icon-directions.svg" alt="Directions Icon">
-          <h3>Getting Here</h3>
-          <div class="details-content">
-            <p>The Nefer Museum is easily accessible by various modes of transportation:</p>
-            <ul>
-              <li><strong>Metro:</strong> Take Line 2 to the "Museum" station.</li>
-              <li><strong>Bus:</strong> Several bus routes stop nearby. Visit the Alexandria Public Transportation website for detailed route information.</li>
-              <li><strong>Taxi:</strong> Taxis are readily available throughout the city. Remember to agree on a fare with the driver before starting your journey.</li>
-              <li><strong>Ride-Sharing:</strong> Utilize popular ride-sharing apps for a convenient transportation option.</li>
-            </ul>
-            <p><strong>Parking:</strong> Limited parking is available at the museum for a fee. We encourage our visitors to consider public transportation whenever possible.</p>
-          </div>
-        </div>
-
-        <!-- Accessibility -->
-        <div class="details-item">
-          <img src="images/icon-accessibility.svg" alt="Accessibility Icon">
-          <h3>Accessibility</h3>
-          <div class="details-content">
-            <p>The Nefer Museum is dedicated to providing a welcoming and accessible experience for all visitors. Our accessibility features include:</p>
-            <ul>
-              <li><strong>Wheelchair Accessibility:</strong> Ramps and elevators throughout the museum ensure ease of access for wheelchair users.</li>
-              <li><strong>Accessible Restrooms:</strong> Designated restrooms, designed for visitors with mobility impairments, are available on each floor. </li>
-              <li><strong>Assistive Listening Devices:</strong> For visitors with hearing impairments, we offer assistive listening devices. Please inquire at the admissions desk.</li>
-              <li><strong>Large Print Materials:</strong>  Large-print brochures and exhibit guides are available upon request.</li>
-            </ul>
-            <p>Should you have any specific accessibility needs or require further assistance, please don't hesitate to contact us in advance. We are happy to help!</p>
+              <p>
+                <strong>Opening Hours</strong><br>
+                Tuesday-Sunday: 10:00 AM - 5:00 PM<br>
+                Closed Mondays
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="visit-cta">
+    <section id="accessibility" class="highlight">
       <div class="container">
-        <a href="tickets.html" class="cta-button">Buy Tickets Now</a>
+        <div class="content">
+          <h2>Accessibility</h2>
+          <p>The Nefer Museum is dedicated to providing a welcoming and accessible environment for all visitors. We offer:</p>
+          <ul>
+            <li>Wheelchair Accessibility: Ramps and elevators are available throughout the museum. </li>
+            <li>Accessible Restrooms: All restrooms are wheelchair accessible.</li>
+            <li>Assistive Listening Devices:  Available upon request at the front desk. </li>
+            <li>Large-Print Materials:  Large-print brochures and gallery guides are available. </li>
+            <li>Sensory-Friendly Hours: We offer sensory-friendly hours on the first Tuesday of each month from 9:00 AM to 10:00 AM. These hours feature reduced lighting and sound for a more relaxed experience.</li>
+          </ul>
+          <p>If you have any specific accessibility needs, please do not hesitate to <a href="#">contact us</a>  in advance, and we will be happy to assist you in planning your visit.</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container">
-      <p>© 2024 The Nefer Museum. All rights reserved.</p>
+      <p>© 2024 Nefer Museum. All rights reserved.</p>
     </div>
   </footer>
 </body>

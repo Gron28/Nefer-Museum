@@ -3,23 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nefer Museum | Discover the Magic in the Small</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Nefer Museum</title>
+  <link rel="stylesheet" href="style.css">    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <div class="container">
       <nav>
-        <a href="index.html" class="logo">Nefer Museum</a>
+        <a href="index.html" class="logo">NEFER Museum</a>
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="visit.html">Visit</a></li>
-          <li><a href="support.html">Support</a></li>      
-          <li><button class="cta-button nav-button"><a href="tickets.html">Tickets</a></button></li>
+          <li><a href="visit.html">Plan Your Visit</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="support.html">Support Us</a></li>      
+          <li><button class="cta-button nav-button"><a href="tickets.html">Buy Tickets</a></button></li>
         </ul>
       </nav>
     </div>
@@ -29,14 +30,14 @@
 
     <section id="hero">
       <div class="hero-image">
-        <div class="hero-overlay"></div>
+        <div class="hero-overlay">
         </div>
       </div>
     </section>
 
     <section id="hero-title">
       <div class="container">
-        <h1>Discover the Magic in the Small</h1>
+        <h1>Ancient Egypt, Up Close</h1>
       </div>
     </section>
 
@@ -44,12 +45,10 @@
       <div class="container">
         <div class="info-grid">
           <div class="info-item">
-            <i class="fas fa-clock"></i> 
             <h3>Opening Hours</h3>
             <p>Tuesday-Sunday<br>10:00 AM - 5:00 PM</p>
           </div>
           <div class="info-item">
-            <i class="fas fa-map-marker-alt"></i> 
             <h3>Location</h3>
             <p>455 Elm Street<br>Alexandria, VA 22301</p>
           </div>
@@ -60,9 +59,26 @@
     <section id="museum-intro">
         <div class="container">
             <h2>Welcome to the Nefer Museum</h2>
-            <p>Step into an intimate world of ancient wonder. Our carefully curated collection reveals the magic in the small, inviting you to discover the stories behind each artifact.</p>
-        </div>
+            <p>Immerse yourself in the heart of ancient Egypt without leaving the city. The Nefer Museum offers an intimate encounter with a bygone era. Our carefully curated collection invites you to slow down and appreciate the artistry and history woven into each artifact. Experience the allure of ancient Egypt in an unexpected setting.</p>
+            <a href="tickets.html" class="cta-button">Get Your Tickets Now</a> <div class="explore-cta">
+          </div>
     </section>
+
+    <section id="new-exhibits">
+      <h2>New at Nefer</h2>
+      <div class="exhibit-card">
+        <img src="images/exhibit1.jpg" alt="Exhibit 1">
+        <h3>The Gold of the Pharaohs</h3>
+        <p>Immerse yourself in the opulence of ancient Egypt.
+          Discover the mastery of goldsmiths as you explore a dazzling collection of jewelry, masks, and ceremonial objects. Learn about the symbolism and significance of gold in Egyptian culture.</p>
+      </div>
+      <div class="exhibit-card">
+        <img src="images/exhibit2.jpg" alt="Exhibit 2">
+        <h3>Gods and Goddesses of the Nile</h3>
+        <p>Immerse yourself in the pantheon of Egyptian deities.
+          Discover the stories and symbolism behind iconic figures like Isis, Osiris, and Horus. Marvel at the artistry and craftsmanship of these statues, once revered as intermediaries between humans and the divine. Unveil the secrets of ancient Egyptian religion through these magnificent representations of godly power.</p>
+      </div>
+      </section>
     
     <section id="featured-artifact" class="highlight">
       <div class="container">
@@ -70,7 +86,7 @@
           <h2>Featured Artifact</h2>
           <div class="artifact-grid">
             <div class="artifact-image">
-              <img id="featured-img" src="images/artifact1.jpg" alt="Featured Artifact">
+              <img id="featured-img" src="images/artifacts/artifact1.jpg" alt="Featured Artifact">
             </div>
             <div class="artifact-info">
               <h3 id="featured-title">Ram's-head Amulet</h3>
@@ -98,11 +114,54 @@
 
   </main>
 
+        
+      
   <footer>
     <div class="container">
-      <p>© 2024 Nefer Museum. All rights reserved.</p>
+      <div class="footer-content">
+  
+        <div class="footer-section">
+          <h3>About Nefer</h3>
+          <p>The Nefer Museum is a hidden gem in the heart of Alexandria, Virginia, offering an intimate and magical journey through the wonders of ancient Egypt.  Discover the stories behind each artifact and experience the allure of a bygone era.</p>
+        </div>
+  
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="visit.html">Visit</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="tickets.html">Tickets</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>
+            Nefer Museum<br>
+            455 Elm Street<br> <!-- Fictitious address -->
+            Alexandria, VA 22301<br> 
+            <a href="tel:+15555551212">(555) 555-1212</a> <!-- Fictitious phone number --><br>
+            <a href="mailto:info@nefermuseum.org">info@nefermuseum.org</a> <!-- Fictitious email -->
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <ul class="social-links">
+            <li><a href="https://www.facebook.com/your-facebook-page"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://twitter.com/your-twitter-profile"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/your-instagram-profile"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+  
+      </div> 
+  
+      <div class="copyright">
+        <p>© 2024 Nefer Museum. All rights reserved.</p> 
+      </div>
     </div>
   </footer>
-
+  
   <script src="script.js"></script> <script src="https://kit.fontawesome.com/your-font-awesome-kit-id.js" crossorigin="anonymous"></script> </body>
 </html>

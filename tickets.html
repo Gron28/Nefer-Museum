@@ -4,95 +4,145 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tickets | Nefer Museum</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+ <header>
     <div class="container">
       <nav>
-        <a href="index.html" class="logo">Nefer Museum</a>
+        <a href="index.html" class="logo">NEFER Museum</a>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="visit.html">Visit</a></li>
-          <li><a href="support.html">Support</a></li>
-          <li><button class="cta-button nav-button"><a href="tickets.html">Tickets</a></button></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="visit.html">Plan Your Visit</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="support.html">Support Us</a></li>      
+          <li><button class="cta-button nav-button"><a href="tickets.html">Buy Tickets</a></button></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-
-    <section id="tickets-hero">
-      <div class="hero-image">
-        <div class="hero-overlay"></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="tickets-title">
-      <div class="container">
-        <h1>Tickets</h1>
-      </div>
-    </section>
-
+    <section id="tickets-hero"> </section>
+    <section id="tickets-title"> </section>
     <section id="ticket-purchase" class="highlight">
       <div class="container">
         <div class="content">
           <h2>Purchase Your Tickets</h2>
-          <p>Secure your admission to the Nefer Museum. Please note that tickets are for a specific date and time slot to ensure a comfortable and immersive experience for all visitors. </p>
+          <p>Secure your admission to the Nefer Museum. Please note that tickets are for a specific date and time slot. Children under 18 have free pass, with an accompanying adult.</p> <form id="ticket-form" action="#" method="post">
+            <div class="form-grid"> 
+              <!-- Column 1: Contact and Payment  -->
+              <div class="form-column">
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="payment-method">Payment Method:</label>
+                  <select id="payment-method" name="payment-method">
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">MasterCard</option>
+                  </select>
+                </div>
+              </div>
+              
+              <!-- Column 2: Ticket Selection -->
+              <div class="form-column"> 
+                <div class="form-group">
+                  <label for="adult-quantity">Number of Adults (18-64) - $20 each:</label>
+                  <div class="quantity-selector"> 
+                    <button type="button" id="decrement-adult">-</button>
+                    <input type="number" id="adult-quantity" name="adult-quantity" min="1" value="1" required>
+                    <button type="button" id="increment-adult">+</button>
+                  </div>
+                </div> 
+              </div>
 
-          <form id="ticket-form" action="#" method="post">
-            <div class="form-group">
-              <label for="ticket-type">Ticket Type:</label>
-              <select id="ticket-type" name="ticket-type">
-                <option value="adult">Adult (18-64) - $20</option>
-                <option value="child">Child (Under 18) - Free</option>
-              </select>
-            </div>
+              <!-- Column 3: Date and Time -->
+              <div class="form-column">
+                <div class="form-group">
+                  <label for="date">Date:</label>
+                  <input type="date" id="date" name="date" required>
+                </div>
 
-            <div class="form-group">
-              <label for="date">Date:</label>
-              <input type="date" id="date" name="date" required>
-            </div>
+                <div class="form-group">
+                  <label for="time">Time Slot:</label>
+                  <select id="time" name="time">
+                    <option value="10:00 AM">10:00 AM</option>
+                    <option value="11:00 AM">11:00 AM</option>
+                  </select>
+                </div>
+              </div>
+            </div> 
 
-            <div class="form-group">
-              <label for="time">Time Slot:</label>
-              <select id="time" name="time">
-                <option value="10:00 AM">10:00 AM</option>
-                <option value="11:00 AM">11:00 AM</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-              <label for="quantity">Quantity:</label>
-              <input type="number" id="quantity" name="quantity" min="1" value="1" required>
-            </div>
+            <div class="price-summary">
+              <p>Total Price: <span id="total-price">$20.00</span></p> </div>
 
             <button type="submit" class="cta-button">Purchase Tickets</button>
           </form>
-
         </div>
       </div>
     </section>
-
     <section id="confirmation" style="display: none;">
       <div class="container">
         <div class="content">
           <h2>Thank You!</h2>
-          <p>Your tickets have been reserved. You'll receive a confirmation email shortly.</p>
-          </div>
+          <p>Your tickets have been reserved. A confirmation will be sent to your email.</p> 
+          <a href="index.html" class="cta-button">Return to Homepage</a> 
+        </div>
       </div>
     </section>
+
   </main>
 
   <footer>
     <div class="container">
-      <p>© 2024 Nefer Museum. All rights reserved.</p>
+      <div class="footer-content">
+  
+        <div class="footer-section">
+          <h3>About Nefer</h3>
+          <p>The Nefer Museum is a hidden gem in the heart of Alexandria, Virginia, offering an intimate and magical journey through the wonders of ancient Egypt.  Discover the stories behind each artifact and experience the allure of a bygone era.</p>
+        </div>
+  
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="visit.html">Visit</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="tickets.html">Tickets</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>
+            Nefer Museum<br>
+            123 Ancient Wonders Lane<br> <!-- Fictitious address -->
+            Alexandria, VA 22301<br> 
+            <a href="tel:+15555551212">(555) 555-1212</a> <!-- Fictitious phone number --><br>
+            <a href="mailto:info@nefermuseum.org">info@nefermuseum.org</a> <!-- Fictitious email -->
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <ul class="social-links">
+            <li><a href="https://www.facebook.com/your-facebook-page"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://twitter.com/your-twitter-profile"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/your-instagram-profile"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+  
+      </div> 
+  
+      <div class="copyright">
+        <p>© 2024 Nefer Museum. All rights reserved.</p> 
+      </div>
     </div>
   </footer>
   
@@ -111,4 +161,7 @@
   </script>
 
 </body>
+      
+<script src="tickets.js"></script>
+
 </html>

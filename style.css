@@ -5,14 +5,15 @@
 
 :root {
   /* Color Palette - Inspired by the Sands of Time */
-  --primary: #135d48; /* Deep Teal - The Nile's mystery */
-  --secondary: #1d7684; /* Golden Yellow - Royalty and ancient treasures */
-  --accent: #9e431c; /* Rich Brown - Earthy and timeless */
-  --light: #000000; /* Off-White - Clean and elegant */
-  --text: #ffffff;/* Dark Gray - For body text */ 
+  --primary: #06664e;  /* Vibrant Teal - The Nile's mystery, reimagined */
+  --secondary: #EFBF04; /* Luminous Gold - Royalty and ancient treasures */
+  --accent: #8f4522;   /* Rich Brown - Earthy and timeless, a touch warmer */
+  --light: #000000;   /* Deep Black - The night sky, filled with ancient secrets */
+  --text: #ffffff;     /* Crisp White - For clear and elegant text */
 
   /* Typography - The Echoes of Scribes */
-  --font-family: 'Lora', serif;
+  --font-family-headings: 'Poppins', sans-serif;
+  --font-family-body: 'Roboto', sans-serif;
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
@@ -20,10 +21,11 @@
 
 /* Global Reset - A Foundation of Order */
 * {
-  margin: 0; /* Set margin to 0 to remove default margin from all elements */
+  margin: 0;
   padding: 0;
   box-sizing: border-box; 
 }
+
 /* Forceful Reset to Remove Top Space */
 html, body, div, section, header, nav, h1, h2, h3, p, ul, li, a {
   margin: 0;
@@ -32,7 +34,7 @@ html, body, div, section, header, nav, h1, h2, h3, p, ul, li, a {
 
 /* Base Styles - Setting the Stage */
 body {
-  font-family: var(--font-family);
+  font-family: var(--font-family-body);
   line-height: 1.7; /* Improved readability */
   color: var(--text);
   background-color: var(--light); 
@@ -60,12 +62,13 @@ a:hover {
 
 /* Typography - The Language of the Past */
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-headings);
   font-weight: var(--font-weight-bold);
 }
 
 h1 {
   font-size: 3.5em; 
-  margin-bottom: 2rem; 
+  margin-bottom: 7rem; 
 }
 
 h2 {
@@ -106,10 +109,14 @@ nav {
   align-items: center; 
 }
 
-.logo {
-  font-size: 1.8rem; 
+nav ul li a {
+  font-size: 1.2em; /* Adjust as needed */
+}
+
+.logo { 
   font-weight: var(--font-weight-bold); 
-  color: var(--primary);
+  color: var(--text);
+  font-size: 2em;
 }
 
 nav ul {
@@ -130,51 +137,46 @@ nav a {
   transition: color 0.3s ease;
 }
 
-nav .nav-button {
-  display: inline-block;
-  background-color: var(--secondary);
-  color: var(--light);
-  padding: 0.4rem 0.9rem;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: var(--font-weight-bold);
-  transition: all 0.3s ease; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-nav .nav-button a {  /* Target the link within the button */
-  color: var(--light); /* Set link color to white */
-  text-decoration: none;  /* Remove underline from link */
-}
-
-nav .nav-button:hover {
-  background-color: darken(var(--secondary), 5%); 
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-}
-
-nav a:hover,
-nav a.active {
-  color: var(--secondary); 
-}
-
-/* Call to Action Button - Unveiling the Past */
 .cta-button {
   display: inline-block;
-  background-color: var(--secondary);
-  color: var(--light);
   padding: 1rem 2rem;
   border: none;
   border-radius: 5px;
+  font-family: var(--font-family-headings); 
+  background-color: var(--secondary); /* Gold background */
+  color: var(--light);               /* White text */ 
   text-decoration: none;
-  font-weight: var(--font-weight-bold);
-  transition: all 0.3s ease; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+  transition: all 0.3s ease;
 }
 
 .cta-button:hover {
+  background-color: darken(var(--secondary), 10%); /* Slightly darker gold on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);         /* Enhanced shadow for depth */
+  color: var(--text); 
+}
+
+nav .nav-button {
+  display: inline-block;
+  background-color: var(--primary);  /* Teal background */
+  color: var(--light);               /* White text */
+  padding: 0.36rem 1.65rem;
+  border: none;
+  font-family: var(--font-family-headings); 
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  transition: all 0.3s ease; 
+}
+nav .nav-button a{
+  background-color: darken(var(--primary), 10%); /* Slightly darker teal on hover */ 
+  color: var(--text);     
+} 
+
+nav .nav-button:hover {
   background-color: darken(var(--secondary), 5%); 
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  color: var(--secondary)
 }
 
 /* Highlight Section - Subtle Elegance */
@@ -197,7 +199,6 @@ nav a.active {
 main {
   padding-top: 0; /* Space for fixed header */
   padding-bottom: 40px;
-  margin-top: -25px;
 }
 
 main:not(#homepage main) {  /* Apply padding to all pages EXCEPT the homepage */
@@ -206,10 +207,8 @@ main:not(#homepage main) {  /* Apply padding to all pages EXCEPT the homepage */
 }
 
 /* --- Hero Sections: Gateway to Ancient Wonders --- */
-
-
 .hero-image {
-  position: absolute; 
+  position: relative; /* Changed to relative for parallax effect */
   top: 0; 
   left: 0; 
   width: 100%; 
@@ -218,10 +217,18 @@ main:not(#homepage main) {  /* Apply padding to all pages EXCEPT the homepage */
   overflow: hidden; 
   background-size: cover;
   background-position: center;
+  background-attachment: fixed; /* Added for parallax effect */
+  perspective: 1000px; /* Added for parallax effect */
 }
 
 .hero-image img {
-  display: none; /* Hide this image - no longer needed  */ 
+  width: 100%;
+  height: auto;
+  display: block; /* Ensure the image is treated as a block element */
+  position: absolute; /* To control positioning for parallax */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensures the image stays behind the overlay */
 }
 
 .hero-overlay {
@@ -230,7 +237,7 @@ main:not(#homepage main) {  /* Apply padding to all pages EXCEPT the homepage */
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(var(--primary-rgb), 0.7), rgba(var(--primary-rgb), 0));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .hero-content {
@@ -243,14 +250,14 @@ main:not(#homepage main) {  /* Apply padding to all pages EXCEPT the homepage */
   font-size: 3.5em; 
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); 
   margin-bottom: 1rem;
-  color: var(--light); 
+  color: var(--text); 
 }
 
 .hero-content p {
   font-size: 1.3em;
   line-height: 1.8;
   margin-bottom: 2rem;
-  color: var(--light);
+  color: var(--text);
 }
 
 /* Homepage Hero */
@@ -261,6 +268,8 @@ main:not(#homepage main) {  /* Apply padding to all pages EXCEPT the homepage */
   background-image: url("images/homepage.jpg"); /* Add your hero image path here */ 
   background-size: cover; 
   background-position: center;
+  justify-content: center;
+  align-items: center;
 }
 
 /* About Hero */
@@ -268,15 +277,19 @@ main:not(#homepage main) {  /* Apply padding to all pages EXCEPT the homepage */
   min-height: 65vh;  
   display: flex;
   align-items: center;
+  background-size: cover;  /* Ensures the image covers the entire area */
+  background-repeat: no-repeat;
   background-image: url("images/about.jpg"); /* Replace with an about-specific image */
 }
 
 /* Visit Hero */
 #visit-hero {
-  min-height: 65vh; 
+  min-height: 65vh;  
   display: flex;
   align-items: center;
-  background-image: url("images/visit.jpg");  
+  background-size: cover;  /* Ensures the image covers the entire area */
+  background-repeat: no-repeat;
+  background-image: url("images/visit2.jpg");  
 }
 
 /* Support Hero */
@@ -299,30 +312,27 @@ main:not(#homepage main) {  /* Apply padding to all pages EXCEPT the homepage */
   background-image: url("images/tickets.jpg");   /* Replace with a tickets-specific image */
 }
 
+
 /* --- Content Section Styles --- */
 
 /* Info Section - Concise & Clear */
-#info {
-  padding: 3rem 0; 
-}
-
-.info-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
-  gap: 2rem; 
-}
 
 .info-item {
-  text-align: center; 
+  position: absolute;
+  left: 120px;
   padding: 2rem; 
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.425);
   transition: all 0.3s ease;
 }
 
-.info-item:hover {
-  transform: translateY(-3px); 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+.info-item:first-child {
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.info-item:last-child {
+  top: 60%; /* Adjust this value for desired spacing */
+  transform: translateY(-50%);
 }
 
 .info-item i {
@@ -336,27 +346,67 @@ main:not(#homepage main) {  /* Apply padding to all pages EXCEPT the homepage */
   margin-bottom: 0.5rem; 
 }
 
-#info .cta-button { 
-  display: block;
-  margin: 0 auto; /* Auto margin on left/right will center it */
-}
 
 /* Museum Intro Section - An Invitation to Explore */
 #museum-intro {
   padding: 4rem 0; 
-  background-color: var(--light); 
-  text-align: center; 
+  background-color: var(--light);
+  text-align: center;
 }
 
 #museum-intro h2 {
   color: var(--primary);
-  margin-bottom: 1rem; 
+  margin-bottom: 2rem;
 }
 
 #museum-intro p {
-  max-width: 800px; 
+  max-width: 666px; 
   margin: 0 auto; 
-  line-height: 1.6; 
+  line-height: 1.73; 
+}
+
+#museum-intro .cta-button {
+  display: block; /* Makes the button a block element to center it */
+  margin: 50px auto; /* Adds margin above and below the button */
+  max-width: 300px; /* Sets a maximum width for the button */
+}
+
+/* exhibit section styles */
+
+#new-exhibits {
+  text-align: center;
+  align-items: flex-start;
+  margin: 40px 0;
+  background-color: var(--light);
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+}
+
+#new-exhibits h2 {
+ color: var(--primary);
+}
+
+.exhibit-card {
+  display: inline-block;
+  width: 565px; /* Increase width for better visual impact */
+  flex: 1;
+  text-align: center;
+  margin: 20px;
+  border: none; /* Remove border for cleaner look */
+  padding: 10px;
+  vertical-align: top; 
+}
+
+.exhibit-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px; /* Rounded corners for images */
+}
+
+.exhibit-card h3 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin: 10px 0;
 }
 
 /* Featured Artifact Section - A Glimpse into the Past */
@@ -385,7 +435,7 @@ main:not(#homepage main) {  /* Apply padding to all pages EXCEPT the homepage */
 }
 
 #featured-artifact .artifact-image:hover img {
-  transform: scale(1.05); 
+  transform: scale(1.03); 
 }
 
 #featured-artifact .artifact-info h3 {
@@ -414,7 +464,7 @@ main:not(#homepage main) {  /* Apply padding to all pages EXCEPT the homepage */
 }
 
 #explore .artifact-grid img:hover {
-  transform: translateY(-3px); 
+  transform: scale(1.03); /* Added zoom effect on hover */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
@@ -425,42 +475,111 @@ main:not(#homepage main) {  /* Apply padding to all pages EXCEPT the homepage */
   margin-top: 3rem; 
 }
 
-/* Unique Experience Section - About Page */
-#unique-experience {
-  padding: 4rem 0; 
+
+/* ----------------------------------------------- About Us Styles ------------------------------------------ */
+
+
+/*  About Us Section - Clean, Modern, Geometric Elegance */
+#unique-experience { 
+  background-color: var(--light);
+  color: var(--text);
+  padding: 8rem 0;
+  text-align: center;
 }
 
-#unique-experience h2 {
-  text-align: center; 
-}
-
+/* About Us Content - Focused and Balanced  */
 #unique-experience .content {
-  text-align: center; 
+  max-width: 900px; 
+  margin: 0 auto;
+  padding: 2rem; 
 }
 
-#unique-experience .cta-buttons {
-  margin-top: 2rem;
+/* Asymmetric Layout for Visual Interest */
+#unique-experience .content-grid { 
+  display: grid;
+  grid-template-columns: 2fr 1fr;  /* Wider text area, narrower for contact and social */
+  gap: 4rem; /* Space between grid areas */
+}
+
+/*  Museum Description  - Typographic Hierarchy and Balance */
+#unique-experience h2 {
+  font-family: var(--font-family-headings);
+  font-size: 3rem; 
+  font-weight: 700;
+  color: var(--primary); 
+  text-align: center; /* Align to the left in the grid */
+}
+
+#unique-experience p {
+  font-family: var(--font-family-body);
+  font-size: 1.15rem; 
+  line-height: 1.8;
+  color: var(--text); 
+  text-align: center; /*  Justify text for readability */
+  margin-bottom: 2rem;  
+}
+
+
+/* Contact & Social Media Section - Aligned in a Vertical Strip */
+#unique-experience .contact-social { 
+  text-align: left;  /* Align content to the left */
+}
+
+#unique-experience .contact-social h3 {
+  font-family: var(--font-family-headings);
+  font-size: 1.8rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+#unique-experience .social-links {
   display: flex;
-  justify-content: center;
-  gap: 1.5rem; 
+  flex-direction: row; /* Arrange icons horizontally */
+  gap: 1.5rem; /* Space between icons */
+  justify-content: center; /* Center icons horizontally */
 }
 
-/* Location & Hours Section - Visit Page */
+/*  Social Icons -  Refined Minimalism  */
+#unique-experience .social-links a { 
+  display: inline-flex;  /* Use inline-flex for horizontal centering of icon */
+  align-items: center;     /* Vertically center the icon within the link */
+  justify-content: center; /* Horizontally center the icon within the link */
+  width: 45px;           /* Size of icon area */
+  height: 45px;         /* Size of icon area */
+  background-color: var(--primary);
+  color: var(--light);
+  border-radius: 5px; 
+  font-size: 1.5rem;  /*  Adjust icon size as needed */
+  transition: all 0.3s ease;
+}
+
+#unique-experience .social-links a:hover {
+  background-color: var(--secondary); 
+}
+
+/* ---------------------------------------------- Visit Page -------------------------------------------- */
+
+
 #location-info {
   padding: 4rem 0;
+  text-align: center;  /* Centers the entire section's content */
 }
 
 .location-grid {
   display: grid;
   grid-template-columns: 1fr 1fr; 
   gap: 3rem; 
-  align-items: center;
+  align-items: center; 
+  max-width: 900px; /* Adjust as needed to control grid width */
+  margin: 2rem auto;  /* Centers the grid horizontally */
 }
 
+/* Map Container - Sleek and Modern */
 .map-container {
-  border-radius: 10px; 
+  border: none;
+  border-radius: 8px; 
   overflow: hidden; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .map-container iframe { 
@@ -468,26 +587,50 @@ main:not(#homepage main) {  /* Apply padding to all pages EXCEPT the homepage */
   height: 400px; 
 }
 
+/* Address & Hours - Stylish and Readable */
 .address-info {
-  text-align: center; 
-}
-
-.address-info p {
-  margin-bottom: 1rem;
+  text-align: left; /* Align text to the left */ 
 }
 
 .address-info h3 {
-  color: var(--primary);
+  font-family: var(--font-family-headings);
+  color: var(--secondary);
   margin-bottom: 1rem; 
 }
 
-/* Accessibility Section - Visit Page */
+.address-info p { /* Styles for the address and hours paragraphs */
+  font-size: 1.1rem; 
+  line-height: 1.6; 
+  color: var(--text);
+  margin-bottom: 0.8rem;
+}
+
+.address-info strong {  /* Styles for bold text within the paragraphs */
+  color: var(--primary); 
+}
+
+/* Accessibility Section - Visit Page  */
 #accessibility {
   padding: 4rem 0; 
+  text-align: center; 
 }
 
 #accessibility .content {
   text-align: left; 
+  max-width: 700px; /* Control the width of the content */
+  margin: 0 auto;  /* Centers the content horizontally */
+}
+
+#accessibility h2 {  /* Style for the Accessibility section heading */
+  font-family: var(--font-family-headings);
+  color: var(--secondary); 
+  margin-bottom: 1.5rem;
+}
+
+#accessibility p { /* Styles for the paragraph text */
+  font-size: 1.1rem; 
+  line-height: 1.6;
+  color: var(--text);
 }
 
 #accessibility ul {
@@ -496,6 +639,14 @@ main:not(#homepage main) {  /* Apply padding to all pages EXCEPT the homepage */
   margin-bottom: 1rem; 
 }
 
+#accessibility li {  /* Styles for the list items */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 0.5rem; /* Adjust vertical spacing between list items */
+}
+
+
 /* Visit CTA - Encouraging Exploration */
 #visit-cta {
   padding: 3rem 0;
@@ -503,9 +654,20 @@ main:not(#homepage main) {  /* Apply padding to all pages EXCEPT the homepage */
   text-align: center;
 }
 
-/* Ways to Support Section - Support Page */
+#visit-cta h2 { /* Style the heading in the Visit CTA section */
+  font-family: var(--font-family-headings);
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+/* ------------------------------------------- Support Page ---------------------------------------------- */
+
 #ways-to-support {
   padding: 4rem 0; 
+}
+
+#ways-to-support h2{
+  color: var(--primary)
 }
 
 .support-options {
@@ -534,77 +696,283 @@ main:not(#homepage main) {  /* Apply padding to all pages EXCEPT the homepage */
 }
 
 .option-item h3 {
-  color: var(--primary); 
+  color: var(--text); 
   margin-bottom: 0.8rem;
 }
 
 .support-cta {
   text-align: center;
   margin-top: 3rem;
+  padding: 2rem; /* Add padding */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  transition: all 0.3s ease; /* Add a hover transition */
 }
 
-/* Ticket Purchase Section - Ticket Page */
+
+.support-cta:hover {
+  transform: translateY(-3px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.support-cta p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 1rem; /* Add spacing below the paragraph */
+}
+
+.support-cta i { /* Assuming you added an <i> tag for the ticket icon */
+  font-size: 3em;
+  color: var(--secondary);
+  margin-bottom: 1rem; 
+}
+
+/* ---------------------- Tickets Page - A Journey Begins ------------------------- */
+
 #ticket-purchase {
-  padding: 4rem 0; 
+  padding: 6rem 0;
+  background-color: var(--light); 
+  color: var(--text); 
 }
 
 #ticket-purchase .content {
   text-align: center;
+  max-width: 700px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 3rem; 
+  background-color: rgba(0, 0, 0, 0.8); 
+  border-radius: 10px; 
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); 
 }
 
 #ticket-purchase h2 {
-  margin-bottom: 1rem;
+  font-family: var(--font-family-headings);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--secondary); 
+  margin-bottom: 2rem; 
 }
 
 #ticket-purchase p {
-  max-width: 700px; 
-  margin: 0 auto 2rem auto; 
-  line-height: 1.6; 
+  font-family: var(--font-family-body);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
-/* Ticket Form Styles */
-#ticket-form .form-group {
-  margin-bottom: 1.5rem; 
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
+/* -----------  Elegant Form Structure  ---------- */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column for a stacked layout */ 
+  gap: 2rem; 
+}
+
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left; 
 }
 
 #ticket-form label {
-  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-body); 
+  font-weight: var(--font-weight-bold); 
+  color: var(--secondary);
+  display: block; 
   margin-bottom: 0.5rem;
 }
 
+/* -----------  Stylish Form Elements ----------- */
+
+#ticket-form input[type="email"],
 #ticket-form select,
-#ticket-form input[type="date"],
-#ticket-form input[type="number"] {
-  padding: 0.8rem;
-  border: 1px solid var(--secondary-color); 
-  border-radius: 5px;
+#ticket-form input[type="date"] {
   width: 100%;
-  max-width: 300px;
+  padding: 0.8rem; 
+  border: 2px solid var(--primary); /* Use your primary teal */
+  border-radius: 5px; 
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--text); 
+  font-family: var(--font-family-body);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: all 0.3s ease; 
 }
 
-/* Ticket Confirmation - A Successful Journey */
+#ticket-form input[type="email"]:hover,
+#ticket-form select:hover, 
+#ticket-form input[type="date"]:hover {
+  border-color: var(--secondary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+/* -----------  Custom Ticket Quantity Selector ----------- */
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the selector horizontally */
+  margin-bottom: 2rem;    /* Add bottom margin for visual separation */
+}
+
+.quantity-selector button {
+  background-color: transparent; /* Remove button background */
+  border: none;
+  padding: 0.5rem 1rem; 
+  font-size: 1.8rem;
+  font-weight: bold; 
+  color: var(--secondary); 
+  cursor: pointer;
+  transition: color 0.3s ease; 
+}
+
+.quantity-selector button:hover {
+  color: var(--primary); /* Teal on hover */ 
+}
+
+.quantity-selector input {
+  width: 4rem; 
+  height: 3rem; 
+  text-align: center;
+  font-size: 1.4rem; 
+  font-weight: bold;
+  color: var(--text); 
+  border: none; 
+  background-color: rgba(0, 0, 0, 0.3);/* Customize for Firefox */ 
+  margin: 0 1rem; /* Add spacing between buttons and input */ 
+}
+
+.quantity-selector input::-webkit-outer-spin-button,
+.quantity-selector input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; 
+}
+
+/* ----------- Price Summary ----------- */
+
+.price-summary {
+  text-align: center;
+  margin-bottom: 2.5rem; 
+  font-size: 1.5rem; 
+}
+
+.price-summary p {
+  font-weight: var(--font-weight-bold);
+  color: var(--secondary);
+}
+
+.cta-button { 
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-family: var(--font-family-headings); 
+  background-color: var(--secondary); /* Gold background */
+  color: var(--light);               /* White text */ 
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+  transition: all 0.3s ease;
+}
+
+
+.cta-button:hover {
+background-color: darken(var(--secondary), 10%); /* Slightly darker gold on hover */
+box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);         /* Enhanced shadow for depth */
+color: var(--text);                             /* Ensure text stays visible (white) */
+}
+
+/* ----------- Confirmation Section -  A Timeless Celebration ----------- */
+
 #confirmation {
   text-align: center; 
   padding: 4rem 0; 
+  background-color: var(--light);
+  color: var(--text); 
 }
 
 #confirmation h2 {
+  font-family: var(--font-family-headings);
   color: var(--secondary); 
   margin-bottom: 1rem; 
 }
 
-/* Footer - A Timeless Foundation */
-footer {
-  background-color: var(--primary); 
-  color: var(--light); 
-  padding: 2rem 0; 
-  text-align: center; 
+#confirmation p {
+  font-family: var(--font-family-body); 
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
-/* ---------------- Media Queries for Responsiveness ---------------- */
+/* ---------------------------------- Footer -------------------------------------------------------------- */
+
+
+footer {
+  background-color: var(--light); /* Deep Black */
+  color: var(--text);           /* Crisp White */
+  padding: 3rem 2rem;           /* Adjust spacing */
+  border-top: 1px solid var(--text);
+}
+
+.footer-content {
+  display: grid;                /* Use CSS Grid */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust column widths */
+  gap: 2rem;                 /* Space between columns */
+}
+
+.footer-section h3 {  /* Styles for section headings */
+  color: var(--text);    /* Luminous Gold */
+  font-size: 1.2em;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {  /* Unordered lists in footer sections */
+  list-style: none; 
+  padding: 0;
+}
+
+.footer-section li {  /* List items in footer sections */
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a { /* Styles for links in all sections (including contact info) */
+  color: var(--primary);   
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover { 
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-links li { 
+  display: inline-block; 
+  margin-right: 1rem; 
+}
+
+.social-links a { 
+  color: var(--secondary);  /* Luminous Gold for icons */
+  font-size: 1.5em;       /* Adjust size as needed */
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover { 
+  color: var(--primary);   /* Vibrant Teal on hover */
+}
+
+/* Copyright */
+.copyright {
+  margin-top: 2rem;   /* Add some space above the copyright */
+  text-align: center; 
+  font-size: 0.9em;  /* Slightly smaller font size */
+}
+
+/* ----------------------------------- Media Queries for Responsiveness ----------------------------------------- */
+
 @media (max-width: 768px) { 
   h1 {
     font-size: 2.8em; 

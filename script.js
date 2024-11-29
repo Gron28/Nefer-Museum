@@ -14,11 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const description = clickedArtifact.dataset.artifactDescription;
 
         featuredImg.src = imgSrc;
-        featuredImg.alt = title;
+        featuredImg.alt = title; 
         featuredTitle.textContent = title;
         featuredDescription.textContent = description;
 
-        // Smooth scroll to the featured artifact section (optional)
+        
         targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
@@ -68,7 +68,7 @@ function initializeArtifacts() {
            data-artifact-img="${artifact.img}" 
            data-artifact-title="${artifact.title}" 
            data-artifact-description="${artifact.description}">
-        <img src="${artifact.img}" alt="${artifact.title}">
+        <img src="${artifact.img}" alt="${artifact.title}"> 
       </div>`;
 
     exploreGrid.innerHTML += artifactItem;

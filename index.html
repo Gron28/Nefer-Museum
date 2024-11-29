@@ -16,7 +16,7 @@
       <nav>
         <a href="index.html" class="logo">NEFER Museum</a>
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li> 
           <li><a href="visit.html">Plan Your Visit</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="support.html">Support Us</a></li>      
@@ -28,7 +28,7 @@
 
   <main>
 
-    <section id="hero">
+    <section id="hero" aria-label="Museum Hero Image"> 
       <div class="hero-image">
         <div class="hero-overlay">
         </div>
@@ -37,11 +37,11 @@
 
     <section id="hero-title">
       <div class="container">
-        <h1>Ancient Egypt, Up Close</h1>
+        <h1>Ancient Egypt <span style="color: #06664e;">Up Close</span></h1> 
       </div>
     </section>
 
-    <section id="info">
+    <section id="info" aria-label="Museum Information">
       <div class="container">
         <div class="info-grid">
           <div class="info-item">
@@ -60,33 +60,33 @@
         <div class="container">
             <h2>Welcome to the Nefer Museum</h2>
             <p>Immerse yourself in the heart of ancient Egypt without leaving the city. The Nefer Museum offers an intimate encounter with a bygone era. Our carefully curated collection invites you to slow down and appreciate the artistry and history woven into each artifact. Experience the allure of ancient Egypt in an unexpected setting.</p>
-            <a href="tickets.html" class="cta-button">Get Your Tickets Now</a> <div class="explore-cta">
-          </div>
+            <a href="tickets.html" class="cta-button">Get Your Tickets Now</a> 
+        </div>
     </section>
 
-    <section id="new-exhibits">
+    <section id="new-exhibits" aria-label="New Exhibits">
       <h2>New at Nefer</h2>
       <div class="exhibit-card">
-        <img src="images/exhibit1.jpg" alt="Exhibit 1">
+        <img src="images/exhibit1.jpg" alt="Exhibit showcasing gold artifacts from ancient Egypt."> 
         <h3>The Gold of the Pharaohs</h3>
         <p>Immerse yourself in the opulence of ancient Egypt.
           Discover the mastery of goldsmiths as you explore a dazzling collection of jewelry, masks, and ceremonial objects. Learn about the symbolism and significance of gold in Egyptian culture.</p>
       </div>
       <div class="exhibit-card">
-        <img src="images/exhibit2.jpg" alt="Exhibit 2">
+        <img src="images/exhibit2.jpg" alt="Exhibit featuring statues of Egyptian gods and goddesses."> 
         <h3>Gods and Goddesses of the Nile</h3>
         <p>Immerse yourself in the pantheon of Egyptian deities.
           Discover the stories and symbolism behind iconic figures like Isis, Osiris, and Horus. Marvel at the artistry and craftsmanship of these statues, once revered as intermediaries between humans and the divine. Unveil the secrets of ancient Egyptian religion through these magnificent representations of godly power.</p>
       </div>
       </section>
     
-    <section id="featured-artifact" class="highlight">
+    <section id="featured-artifact" class="highlight" aria-label="Featured Artifact">
       <div class="container">
         <div class="content">
           <h2>Featured Artifact</h2>
           <div class="artifact-grid">
             <div class="artifact-image">
-              <img id="featured-img" src="images/artifacts/artifact1.jpg" alt="Featured Artifact">
+              <img id="featured-img" src="images/artifacts/artifact1.jpg" alt="Ram's-head Amulet"> 
             </div>
             <div class="artifact-info">
               <h3 id="featured-title">Ram's-head Amulet</h3>
@@ -98,7 +98,7 @@
       </div>
     </section>
 
-    <section id="explore" class="highlight">
+    <section id="explore" class="highlight" aria-label="Explore the Collection"> 
       <div class="container">
         <div class="content">
           <h2>Explore Our Collection</h2>
@@ -137,21 +137,21 @@
   
         <div class="footer-section">
           <h3>Contact</h3>
-          <p>
+          <address> 
             Nefer Museum<br>
-            455 Elm Street<br> <!-- Fictitious address -->
+            455 Elm Street<br> 
             Alexandria, VA 22301<br> 
-            <a href="tel:+15555551212">(555) 555-1212</a> <!-- Fictitious phone number --><br>
-            <a href="mailto:info@nefermuseum.org">info@nefermuseum.org</a> <!-- Fictitious email -->
-          </p>
+            <a href="tel:+15555551212">(555) 555-1212</a><br> 
+            <a href="mailto:info@nefermuseum.org">info@nefermuseum.org</a> 
+          </address>
         </div>
 
         <div class="footer-section">
           <h3>Follow Us</h3>
           <ul class="social-links">
-            <li><a href="https://www.facebook.com/your-facebook-page"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="https://twitter.com/your-twitter-profile"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://www.instagram.com/your-instagram-profile"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/your-facebook-page" aria-label="Nefer Museum on Facebook"><i class="fab fa-facebook-f"></i></a></li> 
+            <li><a href="https://twitter.com/your-twitter-profile" aria-label="Nefer Museum on Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/your-instagram-profile" aria-label="Nefer Museum on Instagram"><i class="fab fa-instagram"></i></a></li> 
           </ul>
         </div>
   
@@ -163,5 +163,6 @@
     </div>
   </footer>
   
-  <script src="script.js"></script> <script src="https://kit.fontawesome.com/your-font-awesome-kit-id.js" crossorigin="anonymous"></script> </body>
+  <script src="script.js"></script>
+</body>
 </html>
